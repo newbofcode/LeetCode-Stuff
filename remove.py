@@ -29,3 +29,20 @@ def removedup1(list1):
             list1[index] = i
             index+=1
     return f"{index}, nums = {list1}"
+
+def removedup2(list1):
+    index=0
+    element = None
+    for i in list1:
+        if i != element:
+            element = i
+            list1[index] = i
+            index += 1
+            counter = 1
+        elif i == element:
+            counter += 1
+            if counter <= 2:
+                index+=1
+            
+        
+    return f"{index}, nums = {list1}"
