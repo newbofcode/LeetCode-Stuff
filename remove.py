@@ -19,3 +19,13 @@ def removeE(list1,element):
             b=a
             c+=1
     return f"{c}, nums = {list1}"
+
+def removedup1(list1):
+    index=0
+    element = None
+    for i in list1:
+        if i != element:
+            element = i
+            list1[index] = i
+            index+=1
+    return f"{index}, nums = {list1}"
